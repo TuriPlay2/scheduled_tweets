@@ -1,0 +1,42 @@
+<div class="d-flex aling-items-center justify-content-center">
+<h1>Cadastre-se</h1>
+</div>
+
+
+
+<%= form_with model: @user, url: sign_up_path do |form| %>
+
+	<%= render "shared/form_errors", form: form %>
+
+
+	<div class="mb-3 row">
+
+		<%= form.label :email %>
+		<%= form.text_field :email, class:"form-control", placeholder: "exemple:yuri@gmail.com" %>
+
+	</div>
+
+	<div class="mb-3 row">
+
+		<%= form.label :password %>
+		<%= form.password_field :password, class:"form-control", placeholder: "password"%>
+
+	</div>
+
+	<div class="mb-3 row">
+
+		<%= form.label :password_confirmation %>
+		<%= form.password_field :password_confirmation, class:"form-control", placeholder: "password"%>
+
+	</div>
+
+
+
+	<div class="mb-3 row">
+
+		<%= form.submit "Sign Up", class:"btn btn-primary" %>
+
+
+	</div>
+
+<% end %>

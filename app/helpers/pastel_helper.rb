@@ -1,0 +1,2 @@
+module PastelHelper
+end
